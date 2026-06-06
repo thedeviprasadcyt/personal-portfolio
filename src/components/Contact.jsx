@@ -56,7 +56,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white pb-2 inline-block relative after:content-[''] after:absolute after:w-1/2 after:h-1 after:bg-accent-blue dark:after:bg-accent-neon after:bottom-0 after:left-1/4">
-            Secure <span className="font-mono text-accent-blue dark:text-accent-neon">Comm-Link</span>
+            Get in Touch – <span className="font-mono text-accent-blue dark:text-accent-neon">Let's Connect</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-4 font-mono">Establish a direct connection for operations or inquiries.</p>
         </motion.div>
@@ -70,7 +70,7 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="glass-card p-8 md:p-10 rounded-2xl flex flex-col gap-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Identifier (Name)</label>
+                <label htmlFor="name" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Your Name</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -79,11 +79,11 @@ const Contact = () => {
                   onChange={handleChange} 
                   required 
                   className="bg-transparent border-b-2 border-gray-300 dark:border-gray-700 focus:border-accent-blue dark:focus:border-accent-neon outline-none py-2 text-gray-900 dark:text-white transition-colors placeholder-gray-400 dark:placeholder-gray-600 focus:bg-white/5 dark:focus:bg-black/20 px-2 rounded-t-lg"
-                  placeholder="Agent 47"
+                  placeholder="What’s your good name?"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Return Address (Email)</label>
+                <label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Your Email</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -92,13 +92,13 @@ const Contact = () => {
                   onChange={handleChange} 
                   required 
                   className="bg-transparent border-b-2 border-gray-300 dark:border-gray-700 focus:border-accent-blue dark:focus:border-accent-neon outline-none py-2 text-gray-900 dark:text-white transition-colors placeholder-gray-400 dark:placeholder-gray-600 focus:bg-white/5 dark:focus:bg-black/20 px-2 rounded-t-lg"
-                  placeholder="agent@matrix.com"
+                  placeholder="What's your email address?"
                 />
               </div>
             </div>
             
             <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Encrypted Payload (Message)</label>
+              <label htmlFor="message" className="text-sm font-semibold text-gray-700 dark:text-gray-300">Your Message</label>
               <textarea 
                 id="message" 
                 name="message" 
@@ -107,7 +107,7 @@ const Contact = () => {
                 onChange={handleChange} 
                 required 
                 className="bg-transparent border-2 border-gray-300 dark:border-gray-700 focus:border-accent-blue dark:focus:border-accent-neon outline-none p-4 text-gray-900 dark:text-white transition-colors placeholder-gray-400 dark:placeholder-gray-600 rounded-lg resize-none focus:bg-white/5 dark:focus:bg-black/20"
-                placeholder="Type your message here..."
+                placeholder="How can I help you?"
               ></textarea>
             </div>
 

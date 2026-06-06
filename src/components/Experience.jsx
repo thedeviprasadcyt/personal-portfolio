@@ -3,10 +3,17 @@ import { motion } from 'framer-motion';
 
 const experienceData = [
   {
+    id: 3,
+    role: "Summer Intern",
+    company: "OKCL",
+    period: "2026",
+    description: "Gaining practical experience in network security, vulnerability assessment, security monitoring, and cybersecurity best practices through real-world projects. 🚀",
+  },
+  {
     id: 1,
     role: "Freelance Penetration Tester",
     company: "Self-Employed",
-    period: "2024 - Present",
+    period: "2025",
     description: "Conducting independent network and web application vulnerability assessments. Identifying security flaws like SQLi, XSS, and broken access controls. Producing detailed remediation reports for clients.",
   },
   {

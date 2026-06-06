@@ -15,7 +15,7 @@ const Footer = () => {
             <span className="text-accent-blue dark:text-accent-neon">{"/>"}</span>
           </h2>
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Architect: Deviprasad Muduli &copy; {currentYear}. Base Secure.
+            Architect: Deviprasad Muduli &copy; {currentYear}| All rights reserved.
           </p>
         </div>
 

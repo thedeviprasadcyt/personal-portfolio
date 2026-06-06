@@ -33,6 +33,16 @@ const projectsData = [
     github: '#',
     demo: '#',
     image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&auto=format&fit=crop&q=60' // Placeholder
+  },
+  {
+    id: 4,
+    title: 'YATRA AI – AI Travel Platform',
+    category: ['AI', 'Travel Technology', 'Full Stack'],
+    description: 'Built an AI-powered travel assistant that generates personalized itineraries, provides multilingual support, intelligent travel recommendations, route guidance, cultural insights, and conversational AI assistance for a smarter travel experience. 🚀',
+    tech: ['React.js', 'Node.js', 'Tailwind CSS', 'OpenAI API', 'Google Maps API'],
+    github: '#',
+    demo: '#',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&auto=format&fit=crop&q=60'
   }
 ];
 
@@ -44,7 +54,7 @@ const Projects = () => {
   const scrollRef = useRef(null);
 
   const filteredProjects = projectsData.filter(project => 
-    filter === 'All' ? true : project.category === filter
+    filter === 'All' ? true : (Array.isArray(project.category) ? project.category.includes(filter) : project.category === filter)
   );
 
   return (
@@ -110,7 +120,9 @@ const Projects = () => {
                       />
                     </div>
                     <div className="p-6 flex-grow flex flex-col">
-                      <div className="text-xs font-mono text-accent-blue dark:text-accent-neon mb-2 uppercase tracking-wider">{project.category}</div>
+                      <div className="text-xs font-mono text-accent-blue dark:text-accent-neon mb-2 uppercase tracking-wider">
+                        {Array.isArray(project.category) ? project.category.join(' • ') : project.category}
+                      </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
                       <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-3 mb-4">{project.description}</p>
                       <div className="mt-auto flex flex-wrap gap-2">
@@ -163,7 +175,9 @@ const Projects = () => {
               <div className="p-6 md:p-8 overflow-y-auto">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <div className="text-sm font-mono text-accent-blue dark:text-accent-neon mb-1">{selectedProject.category}</div>
+                    <div className="text-sm font-mono text-accent-blue dark:text-accent-neon mb-1">
+                      {Array.isArray(selectedProject.category) ? selectedProject.category.join(' • ') : selectedProject.category}
+                    </div>
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h2>
                   </div>
                   <div className="flex space-x-3">

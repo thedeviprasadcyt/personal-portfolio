@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCertificate } from 'react-icons/fa';
 
 const certs = [
+  { id: 4, name: "Google Data Analytics Professional Certificate", issuer: "Coursera", date: "2026" },
   { id: 1, name: "Google CyberSecurity Professional Certificate", issuer: "Coursera", date: "2024" },
   { id: 2, name: "IBM Full Stack Software Developer", issuer: "Coursera", date: "2024" },
   { id: 3, name: "Offensive Security Certified Professional (OSCP) preparation", issuer: "Self", date: "Ongoing" },
